@@ -5,6 +5,36 @@
 	<title>Document</title>
 </head>
 <body>
-	
 </body>
+<script>
+	// 26. 删除排序数组中的重复项   ???
+	var removeDuplicates = function(nums) {
+    nums = new Set(nums);
+    nums = Array.from(nums);
+    console.log(nums);
+    return nums.length;
+};
+   
+    // 27.移除元素
+
+    // 35.搜索插入位置
+    var searchInsert = function(nums, target) {
+    if(target<=nums[0]){return 0;}
+    else if(target>nums[nums.length-1]){return nums.length;}
+    for(let i=0;i<nums.length;i++){
+    if(target>nums[i]&&target<=nums[i+1]){return i+1};   
+    } 
+};
+
+    // 38.报数
+
+    // 53.最大子序列
+    var maxSubArray = function(nums) {
+    var a = new Array();
+    for(let i=0;i<nums.length;i++){
+
+    } 
+}; 
+var c = maxSubArray()
+</script>
 </html>
