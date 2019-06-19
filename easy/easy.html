@@ -30,11 +30,40 @@
 
     // 53.最大子序列
     var maxSubArray = function(nums) {
-    var a = new Array();
+    var a;
     for(let i=0;i<nums.length;i++){
-
+    var b = new Array();   
+    b.push(nums[i]);
+    var j=i;
     } 
 }; 
-var c = maxSubArray()
+var c = maxSubArray([-2,1,-3,4,-1,2,1,-5,4]);  //未答
+
+    // 66.加一
+
+    var plusOne = function(digits) {
+        var z = new Array();
+        var a = new Number();
+        for(let i=0;i<digits.length;i++){
+          a+=digits[i]*Math.pow(10,digits.length-i-1);
+        }
+        a+=1;              // 转成number
+
+        var n=0;           // 转成数组 
+        while(a>=Math.pow(10,n)) 
+            { n++ };
+            let j = n-1;
+        for(let i=0;i<n;i++){
+            var y = Math.pow(10,j);
+            var d = parseInt(a/y);
+            a-=d*y;
+            z.push(d);
+            j--;
+
+        }
+       return z;
+};             // 可能存在范围限制
+
+
 </script>
 </html>
