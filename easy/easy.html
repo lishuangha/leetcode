@@ -64,6 +64,46 @@ var c = maxSubArray([-2,1,-3,4,-1,2,1,-5,4]);  //未答
        return z;
 };             // 可能存在范围限制
 
+// 88.合并两个有序数组
+// nums1 = [1,2,3,0,0,0], m = 3
+// nums2 = [2,5,6],       n = 3
+var nums1 = [1,2,3,0,0,0];
+var nums2 = [2,5,6];
+var m,n = [3,3];
+    var merge = function(nums1,m,nums2,n){
+        var array2 = new Array();
+        for(let i=0;i<m+n;i++){
+            var [tem1,tem2] = [0,0];
+            if(nums1[tem1]>nums2[tem2]){
+                array2.push(nums2[tem2]);
+                tem2++;
+            }else{
+                array2.push(nums1[tem1]);
+                tem1++;
+            }
+        }
+        console.log(array2);
+};
+var c = merge(nums1,m,nums2,n);
+
+
+// 121.买卖股票的最佳时机 Ⅰ
+
+var maxProfit = function(prices) {
+    var moneyLot = 0;
+    for(let i=0;i<prices.length;i++){
+        for(let j=i+1;j<prices.length;j++){
+            if(prices[j]-prices[i]>moneyLot)
+            moneyLot = prices[j]-prices[i];
+        }
+    }
+    return moneyLot;
+};
+
+// 121.买卖股票的最佳时机 Ⅱ
+  var maxProfit = function(prices) {
+    
+};
 
 </script>
 </html>
